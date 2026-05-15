@@ -1,0 +1,79 @@
+{
+  "3": {
+    "class_type": "LoadImage",
+    "inputs": {
+      "image": "character_ref.png"
+    }
+  },
+  "4": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "your prompt here",
+      "clip": ["5", 1]
+    }
+  },
+  "5": {
+    "class_type": "CheckpointLoaderSimple",
+    "inputs": {
+      "ckpt_name": "sd_xl_base_1.0.safetensors"
+    }
+  },
+  "6": {
+    "class_type": "IPAdapterModelLoader",
+    "inputs": {
+      "ipadapter_file": "ip-adapter_sd15.safetensors"
+    }
+  },
+  "7": {
+    "class_type": "IPAdapterApply",
+    "inputs": {
+      "model": ["5", 0],
+      "ipadapter": ["6", 0],
+      "image": ["3", 0],
+      "weight": 0.9
+    }
+  },
+  "8": {
+    "class_type": "CLIPTextEncode",
+    "inputs": {
+      "text": "negative prompt",
+      "clip": ["5", 1]
+    }
+  },
+  "9": {
+    "class_type": "EmptyLatentImage",
+    "inputs": {
+      "width": 768,
+      "height": 512,
+      "batch_size": 1
+    }
+  },
+  "10": {
+    "class_type": "KSampler",
+    "inputs": {
+      "model": ["7", 0],
+      "positive": ["4", 0],
+      "negative": ["8", 0],
+      "latent_image": ["9", 0],
+      "seed": 42,
+      "steps": 20,
+      "cfg": 7,
+      "sampler_name": "euler",
+      "scheduler": "normal"
+    }
+  },
+  "11": {
+    "class_type": "VAEDecode",
+    "inputs": {
+      "samples": ["10", 0],
+      "vae": ["5", 2]
+    }
+  },
+  "12": {
+    "class_type": "SaveImage",
+    "inputs": {
+      "filename_prefix": "comic_shot",
+      "images": ["11", 0]
+    }
+  }
+}
