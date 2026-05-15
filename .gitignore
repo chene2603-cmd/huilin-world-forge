@@ -1,0 +1,33 @@
+# 缓存与临时文件
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+temp_comic/
+output_comic/
+*.log
+
+# 环境依赖
+venv/
+env/
+.env
+*.env
+
+# 媒体生成产物
+*.mp4
+*.mp3
+*.wav
+*.jpg
+*.png
+*.webp
+*.srt
+
+# 大模型与权重
+*.safetensors
+*.ckpt
+*.bin
+
+# 系统杂物
+.DS_Store
+Thumbs.db
+*.swp
