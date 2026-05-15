@@ -1,3 +1,6 @@
+
+---
+
 ### ⚙️ 2. 项目根目录 `config.yaml`
 
 同样在根目录新建 `config.yaml`，复制以下内容：
@@ -90,4 +93,3 @@ advanced:
   log_level: "INFO"
   # 临时文件目录
   temp_dir: ".temp"
-```
