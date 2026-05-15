@@ -1,0 +1,93 @@
+### ⚙️ 2. 项目根目录 `config.yaml`
+
+同样在根目录新建 `config.yaml`，复制以下内容：
+
+```yaml
+# ==========================================
+# 慧凌世界地形系统 - 全局配置文件
+# ==========================================
+
+project:
+  name: "慧凌世界地形系统"
+  version: "1.0.0"
+  default_world: "example_world_protocol"
+
+# ---- 路径设置 ----
+paths:
+  # 核心协议目录（相对于项目根目录）
+  protocol_dir: "0_CORE_PROTOCOL"
+  # 默认使用的协议文件名（不含扩展名）
+  default_protocol: "example_world_protocol"
+  # 蓝图输出根目录
+  blueprint_dir: "1_TERRAIN_BLUEPRINTS"
+  # 默认剧集名称
+  default_episode: "Episode_01"
+  # 渲染引擎输出目录
+  render_output: "2_RENDER_ENGINE/outputs"
+  # 声景生成器声纹库路径
+  voice_models_dir: "3_SOUND_GENERATOR/voice_cloning"
+  # 背景音乐库路径
+  bgm_dir: "3_SOUND_GENERATOR/bgm"
+  # 最终视频导出目录
+  exports_dir: "4_WORLD_BUILDER/exports"
+
+# ---- 渲染引擎配置 ----
+render:
+  # 引擎类型: "stable_diffusion" | "midjourney"
+  engine: "stable_diffusion"
+  # SD WebUI 地址（如果使用 API）
+  sd_api_url: "http://127.0.0.1:7860"
+  # 默认生成参数
+  default_steps: 30
+  default_cfg_scale: 7.5
+  default_width: 1920
+  default_height: 1080
+  # Midjourney 参数（备用）
+  mj_default_params: "--ar 16:9 --style raw --v 6.0"
+
+# ---- TTS 语音合成配置 ----
+tts:
+  # 引擎: "bark" | "vits" | "azure" | "elevenlabs"
+  engine: "bark"
+  # 默认语速、音高修正系数
+  default_speed: 1.0
+  default_pitch: 1.0
+  # API 密钥（可留空，运行时通过环境变量或手动输入）
+  api_key: ""
+
+# ---- 视频装配设置 ----
+assembly:
+  # 输出视频分辨率
+  width: 1920
+  height: 1080
+  # 帧率
+  fps: 24
+  # 默认视频编码器
+  video_codec: "libx264"
+  # 默认音频编码器
+  audio_codec: "aac"
+  # 是否自动烧录字幕
+  burn_subtitles: true
+  # 字幕样式（ASS/FFmpeg 格式）
+  subtitle_style: "Fontsize=24,PrimaryColour=&H00FFFFFF,Outline=1"
+
+# ---- 扫描器配置 ----
+scanner:
+  # 视觉一致性相似度阈值（需要视觉模型时使用）
+  visual_similarity_threshold: 0.85
+  # 声纹比对阈值
+  voice_similarity_threshold: 0.75
+  # 字幕时长容差（秒）
+  subtitle_duration_tolerance: 1.0
+  # 视频时长与蓝图合计允许的最大偏差（秒）
+  video_duration_tolerance: 2.0
+
+# ---- 高级选项 ----
+advanced:
+  # 是否在编译协议时自动校验完整性
+  auto_validate_protocol: true
+  # 日志级别: DEBUG, INFO, WARNING, ERROR
+  log_level: "INFO"
+  # 临时文件目录
+  temp_dir: ".temp"
+```
