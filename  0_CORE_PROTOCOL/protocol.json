@@ -1,0 +1,74 @@
+{
+  "world_name": "慧凌试做界-01",
+  "seed": 20260515,
+  "map_size": [512, 512],
+  "height_rules": [
+    {
+      "min_height": -500,
+      "max_height": 0,
+      "coverage": 0.3,
+      "terrain_types": ["ocean", "deep_ocean"]
+    },
+    {
+      "min_height": 0,
+      "max_height": 300,
+      "coverage": 0.5,
+      "terrain_types": ["plain", "hill", "forest", "wetland"]
+    },
+    {
+      "min_height": 300,
+      "max_height": 1000,
+      "coverage": 0.15,
+      "terrain_types": ["highland", "mountain"]
+    },
+    {
+      "min_height": 1000,
+      "max_height": 3000,
+      "coverage": 0.05,
+      "terrain_types": ["peak", "snowfield"]
+    }
+  ],
+  "biomes": [
+    {
+      "name": "temperate_forest",
+      "temperature_range": [5, 22],
+      "humidity_range": [40, 80],
+      "allowed_terrains": ["plain", "hill"],
+      "vegetation_density": 0.8
+    },
+    {
+      "name": "swamp",
+      "temperature_range": [10, 25],
+      "humidity_range": [60, 100],
+      "allowed_terrains": ["wetland"],
+      "vegetation_density": 0.9
+    },
+    {
+      "name": "alpine_tundra",
+      "temperature_range": [-5, 8],
+      "humidity_range": [20, 60],
+      "allowed_terrains": ["highland", "mountain"],
+      "vegetation_density": 0.2
+    }
+  ],
+  "resources": [
+    {
+      "name": "iron_ore",
+      "biome_affinity": ["temperate_forest", "alpine_tundra"],
+      "rarity": 0.4,
+      "min_depth": -50
+    },
+    {
+      "name": "magic_crystal",
+      "biome_affinity": ["swamp"],
+      "rarity": 0.05,
+      "min_depth": -200
+    }
+  ],
+  "civilization": {
+    "max_city_radius": 5.0,
+    "preferred_terrains": ["plain", "hill"],
+    "forbidden_biomes": ["swamp"],
+    "tech_level": 3
+  }
+}
