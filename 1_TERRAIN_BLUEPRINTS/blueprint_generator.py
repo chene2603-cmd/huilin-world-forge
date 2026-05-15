@@ -1,3 +1,5 @@
+from auto_log_wrap import func_log
+
 """
 慧凌世界地形系统 - 蓝图生成器 v1.0
 根据核心世界协议和场景描述，生成机器可读的分镜建造蓝图。
