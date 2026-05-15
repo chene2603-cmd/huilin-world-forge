@@ -1,0 +1,86 @@
+huilin-world-forge/
+│
+├── README.md                      # 项目总览，即本文件
+├── LICENSE                        # 开源许可证（如MIT）
+│
+├── 0_CORE_PROTOCOL/               # 【第一层】核心地形协议
+│   ├── World_Terrain_Protocol.md  # 已“烧录”的、不可变的世界法则
+│   └── protocol_compiler.py       # 协议编译脚本（“世界架构师”使用）
+│
+├── 1_TERRAIN_BLUEPRINTS/          # 【第二层】地形描述文件
+│   ├── blueprint_generator.py     # 蓝图生成脚本（输入场景，输出结构化蓝图）
+│   ├── Episode_01/                # 按集/章节组织蓝图
+│   │   ├── SC-001_shot_blueprint.json
+│   │   ├── SC-001_dialogue_stream.md
+│   │   └── SC-001_subtitle.srt
+│   └── ...
+│
+├── 2_RENDER_ENGINE/               # 【第三层】地形渲染引擎
+│   ├── sd_control_console.py      # Stable Diffusion 控制台脚本
+│   ├── mj_prompt_builder.py       # Midjourney 提示词构造器
+│   ├── lora/                      # 实体一致性模型库
+│   │   ├── ENTITY_主角_VISUAL.safetensors
+│   │   └── ...
+│   └── references/                # 场景参考图库
+│       ├── BG_REFERENCE_废墟都市.jpg
+│       └── ...
+│
+├── 3_SOUND_GENERATOR/             # 【第四层】声景生成器
+│   ├── voice_cloning/             # 声纹模型目录
+│   │   ├── PROJECT_主角.mp3
+│   │   └── ...
+│   ├── tts_control_console.py     # 语音合成控制脚本
+│   └── bgm/                       # 背景音乐库
+│
+├── 4_WORLD_BUILDER/               # 【第五层】世界构建器
+│   ├── assembly_workflow.py       # 自动化装配脚本（调用FFmpeg等）
+│   └── exports/                   # 最终成品输出目录
+│       └── Episode_01_FINAL.mp4
+│
+├── 5_SCANNER/                     # 【质量保证】世界稳定性扫描器
+│   └── stability_scanner.py       # 终极校验脚本
+│
+└── config.yaml                    # 全局配置文件（模型路径、API密钥等）
+
+│
+├── README.md                      # 项目总览，即本文件
+├── LICENSE                        # 开源许可证（如MIT）
+│
+├── 0_CORE_PROTOCOL/               # 【第一层】核心地形协议
+│   ├── World_Terrain_Protocol.md  # 已“烧录”的、不可变的世界法则
+│   └── protocol_compiler.py       # 协议编译脚本（“世界架构师”使用）
+│
+├── 1_TERRAIN_BLUEPRINTS/          # 【第二层】地形描述文件
+│   ├── blueprint_generator.py     # 蓝图生成脚本（输入场景，输出结构化蓝图）
+│   ├── Episode_01/                # 按集/章节组织蓝图
+│   │   ├── SC-001_shot_blueprint.json
+│   │   ├── SC-001_dialogue_stream.md
+│   │   └── SC-001_subtitle.srt
+│   └── ...
+│
+├── 2_RENDER_ENGINE/               # 【第三层】地形渲染引擎
+│   ├── sd_control_console.py      # Stable Diffusion 控制台脚本
+│   ├── mj_prompt_builder.py       # Midjourney 提示词构造器
+│   ├── lora/                      # 实体一致性模型库
+│   │   ├── ENTITY_主角_VISUAL.safetensors
+│   │   └── ...
+│   └── references/                # 场景参考图库
+│       ├── BG_REFERENCE_废墟都市.jpg
+│       └── ...
+│
+├── 3_SOUND_GENERATOR/             # 【第四层】声景生成器
+│   ├── voice_cloning/             # 声纹模型目录
+│   │   ├── PROJECT_主角.mp3
+│   │   └── ...
+│   ├── tts_control_console.py     # 语音合成控制脚本
+│   └── bgm/                       # 背景音乐库
+│
+├── 4_WORLD_BUILDER/               # 【第五层】世界构建器
+│   ├── assembly_workflow.py       # 自动化装配脚本（调用FFmpeg等）
+│   └── exports/                   # 最终成品输出目录
+│       └── Episode_01_FINAL.mp4
+│
+├── 5_SCANNER/                     # 【质量保证】世界稳定性扫描器
+│   └── stability_scanner.py       # 终极校验脚本
+│
+└── config.yaml                    # 全局配置文件（模型路径、API密钥等）
