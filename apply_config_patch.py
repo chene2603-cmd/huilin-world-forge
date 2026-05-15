@@ -1,3 +1,5 @@
+from auto_log_wrap import func_log
+
 #!/usr/bin/env python3
 """
 补丁脚本：自动为核心模块注入 config.yaml 读取逻辑。
