@@ -1,3 +1,5 @@
+from auto_log_wrap import func_log
+
 #!/usr/bin/env python3
 """
 漫剧生成系统 - 基于慧凌世界框架
