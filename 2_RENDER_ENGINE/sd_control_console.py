@@ -1,3 +1,5 @@
+from auto_log_wrap import func_log
+
 """
 慧凌世界地形系统 - 渲染引擎 v1.0 (Stable Diffusion 控制台)
 从镜头蓝图和核心协议构建标准化提示词，锁定视觉风格、绑定实体LoRA，输出可直接用于SD WebUI/API。
