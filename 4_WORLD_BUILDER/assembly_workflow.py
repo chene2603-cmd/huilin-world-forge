@@ -1,3 +1,5 @@
+from auto_log_wrap import func_log
+
 """
 慧凌世界地形系统 - 世界构建器 v1.0
 自动装配：从蓝图目录收集镜头素材，合成最终影片。
