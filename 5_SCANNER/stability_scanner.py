@@ -1,3 +1,5 @@
+from auto_log_wrap import func_log
+
 """
 慧凌世界地形系统 - 稳定性扫描器 v1.0
 对照核心协议，对最终成品（或中间产物）进行多维度校验，
